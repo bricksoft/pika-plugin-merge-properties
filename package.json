@@ -1,0 +1,27 @@
+{
+  "name": "pika-plugin-merge-properties",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "merges selected package.json properties into built package.json",
+  "main": "src/index.js",
+  "author": "peanutbother",
+  "scripts": {
+    "build": "pika-pack build"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node",
+        {}
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "^0.3.16",
+    "@pika/plugin-standard-pkg": "^0.3.16"
+  }
+}
