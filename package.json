@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "author": "peanutbother",
   "scripts": {
-    "build": "pika-pack build"
+    "build": "pika-pack build",
+    "publish": "pika-pack publish"
   },
   "@pika/pack": {
     "pipeline": [
