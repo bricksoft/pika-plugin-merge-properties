@@ -55,23 +55,14 @@ function manifest(newManifest, {
 
   const properties = options.properties;
 
-  for (const key in newManifest) {
-    const t = typeof newManifest[key];
-
-    if (!newManifest.hasOwnProperty(key) || t === "object") {
-      if (t === "object") {
-        newManifest[key] = _objectSpread({}, newManifest[key], properties[key]);
-        break;
+  for (const key in properties) {
+    // merge values
+    if (Array.isArray(newManifest[key]) || typeof newManifest[key] === "object") {
+      newManifest[key] = _objectSpread({}, newManifest[key], pkg[key]);
+    } // overwrite values
+    else {
+        newManifest[key] = pkg[key];
       }
-
-      newManifest[key] = properties[key];
-    } else {
-      if (Array.isArray(newManifest[key])) {
-        newManifest[key] = [...newManifest[key], ...properties[key]];
-      }
-
-      newManifest[key] = properties[key];
-    }
   }
 
   return newManifest;
