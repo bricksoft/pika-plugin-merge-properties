@@ -14,8 +14,8 @@ export function manifest(newManifest, { options, cwd }) {
   for (const key in properties) {
     // merge values
     if (
-      typeof newManifest[key] === "object" ||
-      Array.isArray(newManifest[key])
+      Array.isArray(newManifest[key]) ||
+      typeof newManifest[key] === "object"
     ) {
       newManifest[key] = { ...newManifest[key], ...pkg[key] };
     }
