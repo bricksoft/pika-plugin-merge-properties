@@ -53,7 +53,7 @@ It is recommended to put it as first step but you have to add it before compilat
     "@pika/pack": "^0.3.7",
     "@pika/plugin-build-node": "^0.3.16",
     "@pika/plugin-standard-pkg": "^0.3.16",
-    "pika-plugin-merge-properties": "^1.0.1"
+    "pika-plugin-merge-properties": "^1.0.2"
   }
 }
 ```
