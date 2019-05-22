@@ -1,6 +1,6 @@
 {
   "name": "pika-plugin-merge-properties",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "merges selected package.json properties into built package.json",
   "main": "src/index.js",
