@@ -1,6 +1,6 @@
 {
   "name": "pika-plugin-merge-properties",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "merges selected package.json properties into built package.json",
   "main": "src/index.js",
@@ -10,8 +10,9 @@
     "url": "https://github.com/jabuco/pika-plugin-merge-properties.git"
   },
   "scripts": {
-    "build": "pika-pack build",
-    "publish": "pika-pack publish"
+    "build": "pika build",
+    "publish": "pika publish",
+    "version": "yarn build"
   },
   "@pika/pack": {
     "pipeline": [
@@ -25,8 +26,8 @@
     ]
   },
   "devDependencies": {
-    "@pika/pack": "^0.3.7",
-    "@pika/plugin-build-node": "^0.3.16",
-    "@pika/plugin-standard-pkg": "^0.3.16"
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.7.1",
+    "@pika/plugin-standard-pkg": "^0.7.1"
   }
 }
